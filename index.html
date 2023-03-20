@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmine-ITI-CMS</title>
+</head>
+<body>
+    <script>
+    /**
+     * Defines Global Variables
+     */
+    var response3 = prompt('Please enter your name', '');
+    while (response3==='') {
+        var response3 = prompt('Please enter your name', '');
+        //Another Solution: I've to remember to ask Eng/Noha about it.
+        // window.location.reload(); // Refresh page
+    }
+    var response4 = prompt('Please enter your birth year', '');
+    while (isNaN(parseFloat(response4)) || response4==='' || response4>2010) {
+        var response4 = prompt('Please enter your birth year', '');
+    } 
+    let d = new Date();
+    let n = d.getFullYear();
+    /**
+     * End Global Variables
+     * Begins Main Functions
+     */
+    /**
+     * @description calculate the age.
+     */
+    function getAge(birthYear){
+        let currentDate = new Date();
+        let currentYear = currentDate.getFullYear();
+        age = currentYear - birthYear;
+        return age;
+    }
+    let calculatedAge = getAge(response4);
+    document.write(`<table style="position:fixed; left:40%; top: 30%">
+                            <tr >
+                                <td>
+                                    <h1 style="text-decoration: underline;">Name:</h1>
+                                </td>
+                                <td>
+                                    <h2>${response3}</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1 style="text-decoration: underline;">Birth year:</h1>
+                                </td>
+                                <td>
+                                    <h2>${Number(response4)}</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h1 style="text-decoration: underline;">Age:</h1>
+                                </td>
+                                <td>
+                                    <h2>${calculatedAge}<h3>
+                                </td>
+                            </tr>
+                    </table>`);   
+    /**
+     * End Main Functions 
+     */
+    </script>
+</body>
+</html>
