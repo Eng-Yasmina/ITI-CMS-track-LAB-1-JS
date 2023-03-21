@@ -18,7 +18,7 @@
         // window.location.reload(); // Refresh page
     }
     var response4 = prompt('Please enter your birth year', '');
-    while (isNaN(parseFloat(response4)) || response4==='' || response4>2010) {
+    while (isNaN(response4) || response4==='' || response4>2010) {
         var response4 = prompt('Please enter your birth year', '');
     } 
     let d = new Date();
@@ -36,7 +36,7 @@
         age = currentYear - birthYear;
         return age;
     }
-    let calculatedAge = getAge(parseInt(response4));
+    let calculatedAge = getAge(response4);
     document.write(`<table style="position:fixed; left:40%; top: 30%">
                             <tr >
                                 <td>
@@ -51,7 +51,7 @@
                                     <h1 style="text-decoration: underline;">Birth year:</h1>
                                 </td>
                                 <td>
-                                    <h2>${parseInt(response4)}</h2>
+                                    <h2>${response4}</h2>
                                 </td>
                             </tr>
                             <tr>
