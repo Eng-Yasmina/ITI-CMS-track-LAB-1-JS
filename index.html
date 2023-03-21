@@ -11,6 +11,7 @@
     /**
      * Defines Global Variables
      */
+
     let response3 = '';
     // Check if the input name is empty or contains any numbers from 1 to 9
     while (response3==='' || /[0-9]/.test(response3)) {
@@ -21,14 +22,14 @@
     while (response4==='' || isNaN(response4) || response4>2010) {
         response4 = prompt('Please enter your birth year', '');
     } 
-    let d = new Date();
-    let n = d.getFullYear();
+
     /**
      * End Global Variables
      * Begins Main Functions
      */
+
     /**
-     * @description calculate the age.
+     * @description Calculate the age.
      */
     function getAge(birthYear){
         let currentDate = new Date();
