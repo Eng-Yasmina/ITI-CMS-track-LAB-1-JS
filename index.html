@@ -12,9 +12,9 @@
      * Defines Global Variables
      */
     var response3 = prompt('Please enter your name', '');
-    while (response3==='') {
+    while (response3==='' || !isNaN(parseFloat(response3))) {
         var response3 = prompt('Please enter your name', '');
-        //Another Solution: I've to remember to ask Eng/Noha about it.
+        //Another Solution (I've to remember to ask Eng/Noha about this issue of refreshing the page)
         // window.location.reload(); // Refresh page
     }
     var response4 = prompt('Please enter your birth year', '');
@@ -36,7 +36,7 @@
         age = currentYear - birthYear;
         return age;
     }
-    let calculatedAge = getAge(response4);
+    let calculatedAge = getAge(parseInt(response4));
     document.write(`<table style="position:fixed; left:40%; top: 30%">
                             <tr >
                                 <td>
@@ -51,7 +51,7 @@
                                     <h1 style="text-decoration: underline;">Birth year:</h1>
                                 </td>
                                 <td>
-                                    <h2>${Number(response4)}</h2>
+                                    <h2>${parseInt(response4)}</h2>
                                 </td>
                             </tr>
                             <tr>
@@ -62,7 +62,7 @@
                                     <h2>${calculatedAge}<h3>
                                 </td>
                             </tr>
-                    </table>`);   
+                    </table>`);    // I love to use ES6 Template literals syntax :)
     /**
      * End Main Functions 
      */
