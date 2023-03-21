@@ -6,4 +6,4 @@ This project is about using javascript to prompt user to enter his name, make su
 - [Table of contents](#table-of-contents)
 - [Contribute](#contribute)
 # Contribute
-Only ITI reviewers are allowed to clone, fork, and pull my project
+Only ITI reviewers are allowed to clone, fork, and pull my project.
